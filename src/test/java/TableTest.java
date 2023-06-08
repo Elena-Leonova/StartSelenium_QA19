@@ -30,18 +30,22 @@ public class TableTest {
         //task 1- print amount of table rows
         List<WebElement> rowElements = wd.findElements(By.cssSelector("#customers tr"));
         int rowQuantity = rowElements.size();
-        System.out.println(rowQuantity);
+        System.out.println("Quantity of rows = " + rowQuantity);
+        Assert.assertEquals(rowQuantity, 9);
 
         //task 2 - print amount of table columns
-        List<WebElement> columElements = wd.findElements(By.cssSelector("#customers tr th"));
+        List<WebElement> columElements = wd.findElements(By.cssSelector("#customers th"));
         int columQuantity = columElements.size();
-        System.out.println(columQuantity);
+        System.out.println("Quantity of columns " + columQuantity);
+        Assert.assertEquals(columQuantity, 3);
 
         //task 3 - find locator for the row3
         wd.findElement(By.cssSelector("#customers tr:nth-child(3)"));
 
         //task 4 - find locator for the last column
         wd.findElement(By.cssSelector("#customers tr :last-child"));
+
+
     }
 
     @AfterTest

@@ -45,7 +45,17 @@ public class TableTest {
         //task 4 - find locator for the last column
         wd.findElement(By.cssSelector("#customers tr :last-child"));
 
-
+        //=====================HW=xPath=============================
+       // task 1
+        List<WebElement> rows = wd.findElements(By.xpath("//tr"));
+        System.out.println("amount of rows = " + rows.size());
+        // task 2
+        List<WebElement> columns = wd.findElements(By.xpath("//th"));
+        System.out.println("amount of columns = " + columns.size());
+        // task 3
+        wd.findElement(By.xpath("//tr[3]"));
+        //// task 4
+        wd.findElement(By.xpath("//td[text()='Italy']"));
     }
 
     @AfterTest

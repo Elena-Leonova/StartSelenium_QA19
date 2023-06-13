@@ -42,7 +42,7 @@ public class StartTest{
         System.out.println(list.size());
 
         wd.findElement(By.cssSelector("[href='/home']"));
-       // wd.findElement(By.xpath("//*[@href='home']"));
+        wd.findElement(By.xpath("//*[@href='/home']"));
 
         wd.findElement(By.cssSelector("[href^='/ho']"));
         wd.findElement(By.xpath("//*[starts-with(@href,'/ho')]"));
@@ -64,7 +64,12 @@ public class StartTest{
         wd.findElement(By.cssSelector("[href$='in']"));
         wd.findElement(By.cssSelector("div [href='/login']"));
 
-
+        //===============HW=xPath=============================
+        wd.findElement(By.xpath("//a"));
+        wd.findElement(By.xpath("//*[@href='/login']"));
+        wd.findElement(By.xpath("//*[@class='active']"));
+        wd.findElement(By.xpath("//*[starts-with(@href,'/login')]"));
+        wd.findElement(By.xpath("//*[contains(@href,'/login')]"));
 
     }
 
